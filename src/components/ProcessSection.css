@@ -1,0 +1,65 @@
+.process-section {
+  background: #f8f8f8;
+  padding: 100px 0;
+}
+
+.process-subtitle {
+  display: block;
+  text-align: center;
+  color: #801010;
+  font-weight: 600;
+}
+
+.process-title {
+  text-align: center;
+  color: #181717;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  font-size: 2.8rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.process-card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.number {
+  width: 70px;
+  height: 70px;
+  background: #801010;
+  color: white;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.process-card h3 {
+  color: #181717;
+  margin-bottom: 15px;
+}
+
+.process-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+@media(max-width:992px){
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+}

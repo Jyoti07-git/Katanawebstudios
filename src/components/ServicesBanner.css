@@ -1,0 +1,42 @@
+.services-banner {
+  height: 500px;
+
+  background-image:
+    linear-gradient(
+      rgba(10, 20, 25, 0.65),
+      rgba(10, 20, 25, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0;
+  padding-top: 80px;
+}
+
+.overlay {
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  color: #d1d1d1;
+  font-size: 1.1rem;
+}
+
+@media (max-width:768px) {
+  .overlay h1 {
+    font-size: 3rem;
+  }
+}
