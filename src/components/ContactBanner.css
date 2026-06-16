@@ -35,3 +35,20 @@
 .contact-overlay p {
   color: #cfcfcf;
 }
+@media (max-width:768px){
+
+  .contact-banner{
+    height:380px;
+    padding:0 20px;
+  }
+
+  .contact-overlay h1{
+    font-size:2.3rem;
+    line-height:1.2;
+  }
+
+  .contact-overlay p{
+    font-size:15px;
+  }
+
+}

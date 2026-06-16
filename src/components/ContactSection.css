@@ -9,16 +9,19 @@
   gap: 60px;
 }
 
+/* LEFT SIDE */
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .contact-card {
   background: rgba(255,255,255,.03);
-
   border: 1px solid rgba(128,16,16,.2);
-
   border-radius: 20px;
-
   padding: 30px;
-
-  margin-bottom: 20px;
 }
 
 .contact-card h3 {
@@ -29,6 +32,8 @@
 .contact-card p {
   color: #cfcfcf;
 }
+
+/* RIGHT SIDE */
 
 .contact-right h2 {
   color: white;
@@ -45,52 +50,86 @@
 .contact-right input,
 .contact-right textarea {
   width: 100%;
-
   background: #222;
-
   border: 1px solid #333;
-
   padding: 16px;
-
   color: white;
-
   border-radius: 10px;
-
   margin-bottom: 20px;
 }
+
 .contact-right input:focus,
 .contact-right textarea:focus {
   outline: none;
-
   border-color: #801010;
-
-  box-shadow:
-    0 0 0 3px rgba(128,16,16,.15);
-
-  transition: all 0.3s ease;
+  box-shadow: 0 0 0 3px rgba(128,16,16,.15);
+  transition: all .3s ease;
 }
 
 .contact-right button {
   background: #801010;
   color: white;
-
   border: none;
-
   padding: 16px 35px;
-
   border-radius: 10px;
-
   cursor: pointer;
+  transition: .3s;
 }
 
-@media(max-width:768px){
+.contact-right button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(128,16,16,.35);
+}
 
-  .contact-wrapper{
-    grid-template-columns:1fr;
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .form-grid{
-    grid-template-columns:1fr;
+  .contact-left {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-left {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+
+  .contact-right h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-right button {
+    width: 100%;
   }
 
 }

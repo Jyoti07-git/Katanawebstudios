@@ -1,0 +1,54 @@
+.portfolio-banner{
+  height:500px;
+
+  background-image:
+  linear-gradient(
+    rgba(24,23,23,.7),
+    rgba(24,23,23,.8)
+  ),
+  url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+}
+
+.portfolio-overlay span{
+  color:#801010;
+  letter-spacing:3px;
+}
+
+.portfolio-overlay h1{
+  color:white;
+  font-size:4rem;
+
+  margin:20px 0;
+}
+
+.portfolio-overlay p{
+  color:#d0d0d0;
+}
+@media (max-width: 768px) {
+
+  .portfolio-banner {
+    height: 380px;
+    padding: 0 20px;
+  }
+
+  .portfolio-overlay h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  .portfolio-overlay p {
+    font-size: 15px;
+    max-width: 320px;
+    margin: auto;
+  }
+
+}
