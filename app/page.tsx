@@ -41,7 +41,7 @@ export default function HomePage() {
       </section>
 
       <section className="process-section section">
-        <div className="shell"><Reveal><p className="eyebrow">How we work</p><h2>Good work is a<br /><span>contact sport.</span></h2></Reveal>
+        <div className="shell"><Reveal><p className="eyebrow">How we work</p><h2>Good work is a<br /><span>contact support.</span></h2></Reveal>
           <div className="process-grid">{process.map((step, index) => <Reveal key={step} delay={index * 0.08}><div className="process-step"><span>0{index + 1}</span><h3>{step}</h3><p>{["Find the signal in the noise.", "Make the strategy visible.", "Turn ambition into interaction.", "Measure what changes."][index]}</p></div></Reveal>)}</div>
         </div>
       </section>

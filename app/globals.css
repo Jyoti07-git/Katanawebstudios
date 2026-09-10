@@ -137,7 +137,40 @@ h1, h2, h3, p { margin: 0; }
 
 @media (max-width: 800px) {
   :root { --shell: min(100% - 40px, 1180px); }
-  .section { padding-block: 80px; }.header-inner { min-height: 70px; }.desktop-nav { display: none; }.menu-button { display: inline-flex; }.mobile-nav { position: fixed; inset: 70px 0 0; display: flex; flex-direction: column; gap: 22px; padding: 36px 20px; visibility: hidden; background: var(--ink); opacity: 0; pointer-events: none; transform: translateY(-4px); transition: visibility .25s, opacity .25s, transform .25s; }.mobile-nav--open { visibility: visible; opacity: 1; pointer-events: auto; transform: translateY(0); }.mobile-nav a:not(.button) { font-family: var(--display); font-size: 44px; font-weight: 900; letter-spacing: -.08em; line-height: .9; text-transform: uppercase; transform: translateY(12px); transition: transform .35s cubic-bezier(.2,.8,.2,1), color .2s; }.mobile-nav--open a:not(.button) { transform: translateY(0); }.mobile-nav .button { margin-top: 14px; width: max-content; }
+  .section { padding-block: 80px; }.header-inner { min-height: 70px; }.desktop-nav { display: none; }.menu-button { display: inline-flex; }.mobile-nav {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 29;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+
+  width: 100%;
+  min-height: calc(100dvh - 70px);
+
+  padding: 36px 20px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  background: var(--ink);
+
+  transform: translateY(-4px);
+  transition:
+    visibility .25s,
+    opacity .25s,
+    transform .25s;
+}.mobile-nav--open { visibility: visible; opacity: 1; pointer-events: auto; transform: translateY(0); }.mobile-nav a:not(.button) { font-family: var(--display); font-size: 44px; font-weight: 900; letter-spacing: -.08em; line-height: .9; text-transform: uppercase; transform: translateY(12px); transition: transform .35s cubic-bezier(.2,.8,.2,1), color .2s; }.mobile-nav--open a:not(.button) { transform: translateY(0); }.mobile-nav .button { margin-top: 14px; width: max-content; }
   .hero { min-height: max(760px, 100svh); }.hero__content { padding-bottom: 105px; }.hero h1 { font-size: clamp(50px, 14vw, 86px); }.hero__bottom { align-items: flex-start; flex-direction: column; margin-top: 32px; }.hero__bottom > p { font-size: 16px; }.hero__actions { gap: 20px; }.scroll-cue { display: none; }
   .manifesto { grid-template-columns: 1fr; gap: 27px; }.manifesto__body { max-width: 500px; }.manifesto h2, .section-top h2, .process-section h2 { font-size: clamp(39px, 10vw, 68px); }.section-top { align-items: flex-start; flex-direction: column; margin-bottom: 38px; }.service-item { grid-template-columns: 30px 1fr auto; gap: 14px; min-height: unset; padding: 28px 0; }.service-item p { grid-column: 2 / -1; }.service-item h3 { font-size: 31px; }.service-item > svg { align-self: start; }.work-grid { grid-template-columns: 1fr; gap: 48px; }.work-card__visual { height: 430px; }.process-grid { grid-template-columns: 1fr 1fr; gap: 44px 20px; margin-top: 48px; }.process-step h3 { margin-top: 32px; }.quote-section { padding-block: 85px; }.final-cta { min-height: 530px; }.final-cta__inner { padding-block: 90px; }
   .page-hero { min-height: 445px; }.page-hero__content { padding-top: 137px; padding-bottom: 55px; }.page-hero h1 { font-size: clamp(47px, 13vw, 82px); }.page-hero__intro { font-size: 16px; }.capability { grid-template-columns: 35px 1fr; gap: 18px; padding: 34px 0; }.capability__detail { grid-column: 2; }.capability h2 { font-size: 33px; }.dark-banner .shell { padding-block: 76px; }.dark-banner h2 { font-size: clamp(39px, 10vw, 70px); }.work-grid--page { grid-template-columns: 1fr; row-gap: 48px; }.work-grid--page .work-card__visual { height: 430px; }.case-note { flex-direction: column; gap: 21px; padding-bottom: 80px; }.about-story { grid-template-columns: 1fr; gap: 32px; }.values { padding-block: 78px; }.values__grid { grid-template-columns: 1fr; margin-top: 35px; }.values__grid > div { min-height: 210px; }.values__grid h3 { margin-top: 45px; }
