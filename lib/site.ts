@@ -3,8 +3,8 @@ export const site = {
   shortName: "KATANA",
   description:
     "Katana Webstudios designs sharp, high-converting digital experiences for ambitious businesses.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://katanastudios.com",
-  email: process.env.CONTACT_EMAIL || "hello@katanastudios.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://katanawebstudios.com",
+  email: process.env.CONTACT_EMAIL || "contact@katanawebstudios.com",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917656945023",
   social: {
     instagram: "https://www.instagram.com/katanawebstudios?stkn=MTV3dWtpMWdwdnpyZg==",
@@ -43,19 +43,27 @@ export const services = [
 
 export const work = [
   {
-    slug: "northstar-finance",
-    client: "Northstar Finance",
+    slug: "northstar-Gym",
+    client: "Northstar Gym",
     category: "Brand platform · Website",
     title: "Confidence for every next move.",
-    description: "A clarity-first digital home for a modern finance partner.",
+    description: "A clarity-first gym for a modern finance partner.",
     type: "northstar",
   },
   {
-    slug: "morrow-objects",
-    client: "Morrow Objects",
+    slug: "Lumeas-Skincare",
+    client: "Lumeas-Skincare",
     category: "Ecommerce · Editorial",
     title: "Objects with a point of view.",
     description: "A refined commerce experience for a design-led homeware label.",
+    type: "morrow",
+  },
+   {
+    slug: "Photography-studios",
+    client: "Photography-studios",
+    category: "Brand Platform · Editorial",
+    title: "Objects with a point of view.",
+    description: "A refined brand experience for a design label.",
     type: "morrow",
   },
   {

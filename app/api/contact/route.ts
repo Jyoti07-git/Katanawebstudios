@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || "Katana Webstudios <onboarding@resend.dev>",
+      from: process.env.EMAIL_FROM || "Katana Webstudios <contact@katanawebstudios.com>",
       to: [process.env.CONTACT_EMAIL || site.email],
       replyTo: brief.email,
       subject: `New project brief — ${brief.name}${brief.company ? ` / ${brief.company}` : ""}`,
