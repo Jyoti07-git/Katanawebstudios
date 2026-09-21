@@ -57,7 +57,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+   verification: {
+    other: {
+      "msvalidate.01": "B3A6504597A6D56411A3EEA64AB0FF6D",
+    },
+  },
 };
+
 
 export default function RootLayout({
   children,
