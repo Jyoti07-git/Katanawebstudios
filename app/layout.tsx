@@ -33,9 +33,7 @@ export const metadata: Metadata = {
     "freelance web developer",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
+  
 
   openGraph: {
     type: "website",

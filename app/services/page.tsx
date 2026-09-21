@@ -4,7 +4,14 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { services } from "@/lib/site";
 
-export const metadata = { title: "Services", description: "Web design, development, SEO, and growth campaigns by Katana Webstudios." };
+export const metadata = {
+  title: "Services",
+  description:
+    "Web design, development, SEO, and growth campaigns by Katana Webstudios.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 export default function ServicesPage() {
   return <><PageHero eyebrow="Capabilities" title="Built to create momentum." intro="From the first strategic question to the moment your site goes live, we make every decision earn its place." />
