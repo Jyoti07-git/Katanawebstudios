@@ -27,7 +27,22 @@ export async function POST(request: NextRequest) {
   let payload: unknown;
   try { payload = await request.json(); } catch { return NextResponse.json({ message: "Invalid request." }, { status: 400 }); }
   if (typeof payload === "object" && payload !== null && "website" in payload && (payload as { website?: unknown }).website) return NextResponse.json({ ok: true });
-
+if (
+  typeof payload !== "object" ||
+  payload === null ||
+  !("privacyConsent" in payload) ||
+  (payload as { privacyConsent?: unknown }).privacyConsent !== "on"
+) {
+  return NextResponse.json(
+    {
+      message: "Please agree to the Privacy Policy before submitting the form.",
+      errors: {
+        privacyConsent: "Please agree to the Privacy Policy before submitting.",
+      },
+    },
+    { status: 422 }
+  );
+}
   const parsed = projectBriefSchema.safeParse(payload);
   if (!parsed.success) {
     const errors = Object.fromEntries(Object.entries(parsed.error.flatten().fieldErrors).map(([key, value]) => [key, value?.[0] || "Please check this field."]));

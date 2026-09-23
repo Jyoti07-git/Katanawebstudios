@@ -54,6 +54,20 @@ export function ContactForm() {
       <fieldset className="service-checks"><legend>What can we help with?</legend><div>{services.map((service) => <label key={service.number}><input type="checkbox" name="services" value={service.title} /><span>{service.title}</span></label>)}</div>{errors.services && <p className="field-error">{errors.services}</p>}</fieldset>
       <label className="field field--full"><span>Tell us about the project <b>*</b></span><textarea name="description" rows={6} placeholder="What are you building? Where are you now, and where do you want to go?" aria-invalid={!!errors.description} aria-describedby={errors.description ? "description-error" : undefined} />{errors.description && <p id="description-error" className="field-error">{errors.description}</p>}</label>
       <label className="honeypot" aria-hidden="true">Leave this empty<input name="website" tabIndex={-1} autoComplete="off" /></label>
+      <label className="privacy-consent">
+  <input type="checkbox" name="privacyConsent" required />
+  <span>
+    I agree to the{" "}
+    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+      Privacy Policy
+    </a>{" "}
+    and consent to Katana Webstudios using the information I provide to respond to my enquiry.
+  </span>
+</label>
+
+{errors.privacyConsent && (
+  <p className="field-error">{errors.privacyConsent}</p>
+)}
       {status === "error" && !Object.keys(errors).length && <p className="form-status form-status--error">Something went wrong. Please try again or contact us on WhatsApp.</p>}
       <button className="button form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? <><LoaderCircle className="spin" /> Sending</> : <>Send project brief <ArrowUpRight /></>}</button>
       <p className="form-note">We’ll only use your details to respond to this enquiry.</p>
